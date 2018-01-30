@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Global and Local variables</title>
+    <script type="text/javascript">
+      var fullName = 'John Doe';
+      var firstName = 'G.I.';
+      var lastName = 'Joe';
+      
+      function showName() {
+        var fullName = 'Jane Doe';
+        document.write('Your name is ' + fullName);
+      };
+      
+      function displayName(firstName,lastName) {
+        // Concatenate the parameters into a string
+        var fullName = firstName + ' ' + lastName;
+        return fullName;
+      };
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Global and Local variables</h3>
+    <script type="text/javascript">
+      showName();
+      document.write('<br/>Another name for you is ' + fullName);
+      document.write('<br/>I have not met ' +
+        displayName('Bruce','Willis'));
+    </script>
+  </body>
+</html>

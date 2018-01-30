@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript displayName()</title>
+    <script type="text/javascript">
+      function displayName(firstName, lastName) {
+        var fullName = firstName + ' ' + lastName;
+        return fullName;
+      }
+      var myFirstName = prompt('Enter your first name:','');
+      var mySecondName = prompt('Enter your second name:','');
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>displayName(firstName,lastName)</h3>
+    <script type="text/javascript">
+      document.write('<p>' + displayName(myFirstName, mySecondName) + '</p>');
+      document.write('<p>' + displayName('Mickey', 'Mouse') + '</p>');
+    </script>
+  </body>
+</html>

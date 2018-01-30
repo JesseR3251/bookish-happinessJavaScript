@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Debugging Example 3</title>
+    <script>
+      function outputCount(maxCount) {
+        var count = 1;
+        while (count < maxCount) {
+          document.write('Number ' + count + '<br/>');
+          count++;
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Debugging Example 3</h3>
+    <h4>Display 5 Numbers</h4>
+    <script>
+      debugger;
+      outputCount(5);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hoisting</title>
+    <script type="text/javascript">
+      bla = 2;
+      var bla;
+      
+      // is implicitly understood as:
+      
+      var bla;
+      bla = 2;
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Hoisting</h3>
+    <script type="text/javascript">
+      var x = 0;  // x is declared global, then assigned a value of 0
+
+      document.write(typeof z, '<br>'); // undefined, since z doesn't exist yet
+
+      function a() { // when a is called,
+        var y = 2;   // y is declared local to function a, then assigned a value of 2
+
+        document.write(x+' '+y, '<br>');   // 0 2 
+
+        function b() {       // when b is called
+          x = 3;  // assigns 3 to existing global x, doesn't create a new global var
+          y = 4;  // assigns 4 to existing outer y, doesn't create a new global var
+          z = 5;  // creates a new global variable z and assigns a value of 5. 
+        }         // (Throws a ReferenceError in strict mode.)
+
+        b();     // calling b creates z as a global variable
+        document.write(x+' '+y+' '+z, '<br>');  // 3 4 5
+      }
+
+      a();                   // calling a also calls b
+      document.write(x+' '+z, '<br>');     // 3 5
+      document.write(typeof y, '<br>'); // undefined as y is local to function a
+      
+      function demoScope() {
+        var myVar = 1;
+        let myLet = 2;
+        const MYCONST = 3;
+        {
+          var myVar = 100;
+          let myLet = 200;
+          const MYCONST = 300;
+          document.write('myVar in block scope is ', myVar, '<br>');
+          document.write('myLet in block scope is ', myLet, '<br>');
+          document.write('MYCONST in block scope is ', MYCONST, '<br>');
+        }
+        document.write('myVar outside of block scope is ', myVar, '<br>');
+        document.write('myLet outside of block scope is ', myLet, '<br>');
+        document.write('MYCONST outside of block scope is ', MYCONST, '<br>');
+      }
+      demoScope();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Event Bubbling</title>
+  </head>
+  <body onclick="alert('Hi there')">
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>JavaScript Event Bubbling</h3>
+    <button onclick="alert('Hello')">Click me first</button>
+    <button onclick="alert('Wazzup?');event.stopPropagation()">Click me second</button>
+    <br><a href="https://broward.edu/" onclick="alert('Going to BC\'s web site');event.preventDefault()">Broward College</a>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+// JavaScript code only, no HTML or CSS code

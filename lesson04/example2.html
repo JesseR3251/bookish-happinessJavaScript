@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Debugging Example 2</title>
+    <script>
+      function outputCount(maxCount) {
+        var count = 1;
+        while (count < maxCount) {
+          document.write('Count = ' + count + '<br/>');
+          count++;
+          /*if (count % 2 == 0) {
+            console.log('Even count is ' + count);
+          }*/
+          console.log('Count=' + count);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Debugging Example 2</h3>
+    <script>
+      outputCount(5);
+    </script>
+  </body>
+</html>

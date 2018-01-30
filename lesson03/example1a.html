@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript default parameters</title>
+    <script>
+      function multiply(a, b = 1) {
+        // b = (typeof b !== 'undefined') ? b : 1;
+        return a * b;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>JavaScript default parameters</h3>
+    <script>
+      document.write('<p>' + multiply(5, 2) + '</p>');
+      document.write('<p>' + multiply(5, 1) + '</p>');
+      document.write('<p>' + multiply(5) + '</p>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Switch</title>
+    <script type="text/javascript">
+      var county = prompt('Enter the county you live in','').toUpperCase();
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Switch</h3>
+    <script type="text/javascript">
+      switch (county) {
+        case 'BROWARD':
+          document.write('Go to Las Olas Blvd<br>');
+          break;
+        case 'MIAMI-DADE':
+          document.write('Go to Flagler Street<br>');
+          break;
+        case 'MONROE':
+          document.write('Go to Key West<br>');
+          break;
+        default :
+          document.write('Go Home<br>');
+          break;
+      }
+    </script>
+  </body>
+</html>

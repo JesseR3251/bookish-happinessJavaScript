@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>List Style Type</title>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>List Style Type</h3>
+    <script type="text/javascript">
+      var choice = prompt('Select a list type:' +
+        '\n1-Numbered, 2-Lettered, 3-Roman numbered');
+      var validInput = true;
+      var listStyle = '';
+      var listType = '';
+      switch (choice) {
+        case '1':
+          listType = 'Numbered List';
+          listStyle = 'decimal';
+          break;
+        case '2':
+          listType = 'Lettered List';
+          listStyle = 'upper-alpha';
+          break;
+        case '3':
+          listType = 'Roman Numbered List';
+          listStyle = 'upper-roman';
+          break;
+        default :
+          validInput = false;
+          break;
+      }
+      if (validInput) {
+        document.write('<h4>' + listType + '</h4>');
+        document.write('<ol style="list-style-type: ' + listStyle + '">');
+        for (var i = 1; i <= 5; i++) {
+          document.write('<li>Item ' + i + '</li>');
+        }
+        document.write('</ol>');
+      } else {
+        document.write('Invalid option selected');
+      }
+    </script>
+  </body>
+</html>

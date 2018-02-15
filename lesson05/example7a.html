@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Switch</title>
+    <script type="text/javascript">
+      var state = prompt('Enter the state you live in','').toUpperCase();
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Switch</h3>
+    <script type="text/javascript">
+      switch (state) {
+        case 'TN':
+        case 'AL':
+        case 'OH':
+          document.write('State tax is 5%<br>');
+          break;
+        case 'CA':
+        case 'NY':
+        case 'MA':
+          document.write('State tax is 10%<br>');
+          break;
+        case 'FL':
+        case 'TX':
+        case 'OR':
+          document.write('No state tax');
+          break;
+      }
+    </script>
+  </body>
+</html>

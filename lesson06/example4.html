@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Rollover</title>
+    <script type="text/javascript">
+      if (document.images) {
+        var ciw_on = new Image();
+        ciw_on.src = 'images/ciw_on.gif';
+        var ciw_off = new Image();
+        ciw_off.src = 'images/ciw_off.gif';
+        var ciw1_on = new Image();
+        ciw1_on.src = 'images/ciw1_on.gif';
+        var ciw1_off = new Image();
+        ciw1_off.src = 'images/ciw1_off.gif';
+      }
+      function imageOn(imagename) {
+        if(document.images) {
+          (imagename=='ciw') ? document.images[0].src = ciw_on.src : '';
+          (imagename=='ciw1') ? document.images[0].src = ciw1_on.src : '';
+        }
+      }
+      
+      function imageOff(imagename) {
+        if(document.images) {
+          (imagename=='ciw') ? document.images[0].src = ciw_off.src : '';
+          (imagename=='ciw1') ? document.images[0].src = ciw1_off.src : '';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Image Rollover</h3>
+      <p><img src="images/ciw_off.gif" width="100" height="52"
+      alt="CIW Logo" name="ciw" onmouseout="imageOn('ciw');return true;" onmouseout="imageOff('ciw');return true;"></p>
+      <p><img src="images/ciw1_off.gif" width="100" height="52"
+      alt="CIW Logo" name="ciw1" onmouseout="imageOn('ciw1');return true;" onmouseout="imageOff('ciw1');return true;"></p>
+  </body>
+</html>

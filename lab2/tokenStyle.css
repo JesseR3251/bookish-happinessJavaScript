@@ -1,0 +1,17 @@
+body {
+	color: #f2f1ef;
+	background-color: #0375b4;
+	padding-left: 10pt;
+	padding-top: 10pt;
+	font-family: helvetica;
+	}
+	
+h1 {
+	text-align: center;
+	}
+	
+hr {
+	border-color: black;
+	width: 60%;
+	
+	}

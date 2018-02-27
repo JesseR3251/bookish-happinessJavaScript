@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Arrays</h3>
+    <script type="text/javascript">
+      var question = new Array(10);
+      question[0] = 'What is 5 * 6?';
+      question[1] = 'Who played Scarlett O\'Hara?';
+      question[2] = 'Which horse won the 1980 Irish Derby?';
+      var answers = new Array(30, 'Vivien Leigh', 'Tyrnavos');
+      for (var i in question) {
+        document.write('Q: ' + question[i] + ' A: ' + answers[i] + '<br>');
+      }
+      var myArray = new Array('Value 2','Value 1','Value 3',
+        'Value 11','Value 5','Value 4');
+      document.write(myArray + '<br/>');
+      myArray.reverse();
+      document.write(myArray + '<br/>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Date Object</title>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Date Object</h3>
+    <script type="text/javascript">
+      var theMonths = new Array('January','February','March',
+        'April','May','June','July','August','September',
+        'October','November','December');
+      var weekDays = new Array('Sunday','Monday','Tuesday',
+        'Wednesday','Thursday','Friday','Saturday');
+      var currentDate = new Date();
+      //currentDate.setMonth(5);
+      document.write('Current Month is ' + currentDate.getMonth() + '<br>');
+      document.write('Current Month is ' + theMonths[currentDate.getMonth()] + '<br>');
+      document.write('Current Day is ' + currentDate.getDay() + '<br>');
+      document.write('Current Day is ' +
+        weekDays[currentDate.getDay()] + '<br/>');
+      document.write('Current Year is ' +
+        currentDate.getYear() + '<br/>');
+      document.write('Current Full Year is ' +
+        currentDate.getFullYear() + '<br/>');
+      document.write('Time is ' + currentDate.getTime() + '<br/>');
+      var christmasDay = new Date();
+      christmasDay.setDate(25);
+      christmasDay.setMonth(11);
+      christmasDay.setYear(christmasDay.getFullYear() + 1);
+      document.write('Christmas next year is ' + christmasDay +
+        '<br/>');
+    </script>
+  </body>
+</html>

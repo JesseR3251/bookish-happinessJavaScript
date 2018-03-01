@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timer</title>
+    <script type="text/javascript">
+      function runClock() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+        var timeString = hours + ':' + minutes + ':' + seconds;
+        document.timeForm.timeNow.value = timeString;
+        setTimeout("runClock()",1000);
+      }
+    </script>
+  </head>
+  <body onLoad="runClock()">
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Timer</h3>
+    <form name="timeForm">
+      <input type="text" name="timeNow">
+    </form>
+  </body>
+</html>

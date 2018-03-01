@@ -21,6 +21,34 @@
       document.write(myArray + '<br/>');
       myArray.reverse();
       document.write(myArray + '<br/>');
+      myArray.sort();
+      document.write(myArray + '<br/>');
+      var myNumbers = new Array(4,6,1,3,9,11,2,5);
+      myNumbers.sort();
+      document.write(myNumbers + '<br/>');
+      myNumbers.sort(function(a, b){return a-b});
+      document.write(myNumbers + '<br/>');
+      var myManyArrays = myNumbers.join('||');
+      document.write(myManyArrays + '<br/>');
+      myNumbers.push(21);
+      document.write(myNumbers + '<br/>');
+      myNumbers.pop();
+      document.write(myNumbers + '<br/>');
+      myNumbers.unshift(21);
+      document.write(myNumbers + '<br/>');
+      myNumbers.shift();
+      document.write(myNumbers + '<br/>');
+      var multiArr = new Array();
+      multiArr[0] = new Array();
+      multiArr[1] = new Array();
+      multiArr[2] = new Array();
+      multiArr[3] = 'Multi-dimensional';
+      multiArr[0][0] = 10;
+      multiArr[0][1] = 20;
+      multiArr[1][0] = 30;
+      multiArr[1][1] = 40;
+      multiArr[2][1] = 50;
+      document.write(multiArr[1][0] * multiArr[1][1]);
     </script>
   </body>
 </html>

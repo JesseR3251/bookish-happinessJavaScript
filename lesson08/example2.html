@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soldier Custom Object</title>
+    <script type="text/javascript">
+      var soldier = {
+        name: undefined,
+        rank: 'captain',
+        fallIn: function() {
+          alert('At attention, arms at the side, head and eyes forward.');
+        },
+        fallOut: function() {
+          alert('Drop out of formation, step back, about face!');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Soldier Custom Object</h3>
+    <script type="text/javascript">
+      soldier.name = 'Tina Savage';
+      document.write('The name of the soldier is ' + soldier.name + '<br>');
+      document.write('The rank of ' + soldier.name + ' is ' + soldier.rank + '.');
+      soldier.fallIn();
+      soldier.fallOut();
+    </script>
+  </body>
+</html>

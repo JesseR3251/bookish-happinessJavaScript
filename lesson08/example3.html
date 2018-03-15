@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>House Custom Object</title>
+    <script type="text/javascript" src="house.js"></script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>House Custom Object</h3>
+    <script type="text/javascript">
+      var myHouse = new House(5, 'colonial', 1990, true);
+      document.write('My house has ' + myHouse.rooms + ' rooms.<br>');
+      document.write('My house style is ' + myHouse.style + '.<br>');
+      document.write('My house was built in ' + myHouse.yearBuilt + '.<br>');
+      document.write('My house has a garage: ' + myHouse.hasGarage + '.<br>');
+      document.write('My house living space is ' + myHouse.livingSpace(30, 70, 2) + ' square feet.<br>');
+      myHouse.maintain();
+      document.write('<hr>');
+      var yourHouse = new House(4,'spanish',2003,false);
+      document.write('Your house has ' + yourHouse.rooms + ' rooms.<br>');
+      document.write('Your house style is ' + yourHouse.style + '.<br>');
+      document.write('Your house was built in ' + yourHouse.yearBuilt + '.<br>');
+      document.write('Your hous has a garage: ' + yourHouse.hasGarage + '.<br>');
+      document.write('Your house living space is ' + yourHouse.livingSpace(40, 50, 1) + ' square feet.<br>');
+    </script>
+  </body>
+</html>

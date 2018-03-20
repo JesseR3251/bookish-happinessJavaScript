@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Check CSS class data</title>
+    <script type="text/javascript">
+      function getValues(objName) {
+        var fieldArray = document.getElementsByClassName(objName);
+        alert('Total objects with class \"input\" = ' + fieldArray.length);
+        for (var i=0;i<fieldArray.length;i++) {
+          alert((i+1) + ' = ' + fieldArray[i].innerHTML);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Check CSS class data</h3>
+    <p class="input">First</p>
+    <p class="input">Second</p>
+    <p class="input">Third</p>
+    <input type="button" value="Get elements with class input" onClick="getValues('input')">
+  </body>
+</html>

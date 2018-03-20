@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Check named element data</title>
+    <script type="text/javascript">
+      function getValues(objName) {
+        var fieldArray = document.getElementsByName(objName);
+        alert('Total objects with name \"txtField\" = ' + fieldArray.length);
+        for (var i = 0; i < fieldArray.length; i++) {
+          alert(fieldArray[i].id + ' = ' + fieldArray[i].value);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Check named element data</h3>
+    <input id="Text1" type="text" name="txtField" value="CIW"><br>
+    <input id="Text2" type="text" name="txtField" value="CERTIFICATION"><br>
+    <input id="Text3" type="text" name="txtField" value="RULES"><br>
+    <input type="button" value="Get elements named txtField" onclick="getValues('txtField')">
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Appending Content</title>
+    <script type="text/javascript">
+      function AnswerWrong() {
+        var txt = document.createElement('p');
+        txt.innerHTML = 'Wrong Answer!';
+        txt.style.color = 'red';
+        txt.setAttribute('class','wrong');
+        window.document.body.appendChild(txt);
+      }
+      function AnswerRight() {
+        var txt = 'RIGHT ANSWER!';
+        var newtext = document.createTextNode(txt);
+        newtext.id = 'newidname';
+        window.document.body.appendChild(newtext);
+      }
+      function reloadPage() {
+        window.location.reload();
+        document.formButtons.button1.disabled = false;
+        document.formButtons.button2.disabled = false;
+        document.formButtons.button3.disabled = false;
+      }
+      function addImage() {
+        var img = document.createElement('img');
+        img.src = 'images/pic1.jpg';
+        var src = document.getElementById('imageHere');
+        src.appendChild(img);
+      }
+    </script>
+  </head>
+  <body id="body">
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Appending Content</h3>
+    Question: How many little pigs had houses made of straw?<br>
+    <form name="formButtons">
+      <p><input type="button" name="button1" value="1 little pig" onclick="AnswerRight();this.disabled=true;"></p>
+      <p><input type="button" name="button2" value="2 little pigs" onclick="AnswerWrong();this.disabled=true;"></p>
+      <p><input type="button" name="button3" value="3 little pigs" onclick="AnswerWrong();this.disabled=true;"></p>
+      <p><input type="button" value="Reload Page" onclick="reloadPage();"></p>
+      <p><input type="button" value="Add image" onclick="addImage();"></p>
+      <p id="imageHere"> </p>
+    </form>
+  </body>
+</html>

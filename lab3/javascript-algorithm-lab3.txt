@@ -1,0 +1,20 @@
+User enters their birthday like so: 08-04
+
+Get today's date
+
+Get the user's birthday:
+ pass month and day into the date object, and the current year is added to the end
+
+
+
+
+
+
+
+================
+RESULT
+================
+USER ENTERS: 08-04
+
+PAGE RETURNS: 132 days
+Saturday, August 04, 2018 

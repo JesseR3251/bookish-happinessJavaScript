@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form Elements</title>
+    <script type="text/javascript">
+      function outputForm() {
+        var len = document.forms[0].length;
+        var output = '';
+        for (var i=0; i < len; i++) {
+          output += document.forms[0].elements[i].name + ' = ' + document.forms[0].elements[i].value + '\n';
+        }
+        alert(output);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Form Elements</h3>
+    <form name="myForm" method="post" action="javascript: alert('Submitted')">
+      First Name: <input type="text" name="firstname"><br>
+      Email: <input type="text" name="email"><br>
+      <input type="submit" name="submit" value="Submit Form" onclick="outputForm();">
+    </form>
+  </body>
+</html>

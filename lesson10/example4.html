@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Text & Textarea Objects</title>
+    <script type="text/javascript">
+      function updateCommentCount() {
+        document.myForm.commentCount.value = document.myForm.comments.value.length;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Text & Textarea Objects</h3>
+    <form name="myForm" method="post" action="">
+      *Name: <input type="text" name="fullname" value="Enter your full name" onfocus="if (this.value == 'Enter your full name') {this.value = ''}" onblur="if (this.value == '') {this.value = 'Enter your full name'}"><br>
+      *Comments: <textarea name="comments" onfocus="if (this.value == 'This is where you enter comments') {this.value = '';updateCommentCount()}" onblur="if (this.value == '') {this.value = 'This is where you enter comments';updateCommentCount()}" onkeyup="updateCommentCount()">This is where you enter comments</textarea>
+      <input name="commentCount" type="text" disabled="disabled" value="32" size="4">
+    </form>
+  </body>
+</html>

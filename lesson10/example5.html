@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Radio Object</title>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Radio Object</h3>
+    <form name="myForm" method="post" action="">
+      Do you like Apples?
+        <input type="radio" name="likesApples" value="Yes" onclick="alert(document.myForm.likesApples[0].value)"> Yes 
+        <input type="radio" name="likesApples" value="No" checked onclick="alert(document.myForm.likesApples[1].value)"> No
+        <input type="radio" name="likesApples" value="Maybe" onclick="alert(document.myForm.likesApples[2].value);if (document.myForm.likesApples[2].checked) {alert('I\'m checked')}"> Maybe
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Navigator Object properties</title>
+  </head>
+  <body>
+    <h2>Navigator Object properties</h2>
+    <script type="text/javascript">
+      var txt = '';
+      for (var i in navigator) {
+        txt += 'navigator[\''+i+'\'] is ' + navigator[i] + '<br/>';
+      };
+      document.write(txt);
+    </script>
+  </body>
+</html>

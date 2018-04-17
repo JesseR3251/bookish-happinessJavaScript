@@ -4,23 +4,24 @@
     <meta charset="utf-8">
     <title>Multiple Select</title>
     <script type="text/javascript">
-	function isSelected(theForm) {
-		var len = theForm.mySelect.length;
-		var theSelections = 'Selected options: \n';
-		for (var i = 0; i < len; i++) {
-			if (theForm.mySelect.options[i].selected) {
-				theSelections += theForm.mySelect.options[i].text + '\n';
-			}
-		}
-		alert(theSelections);
-		
-	}
+      function isSelected(theForm) {
+        var len = theForm.mySelect.length;
+        var theSelections = 'Selected options:\n';
+        for (var i = 0; i < len; i++) {
+          if (theForm.mySelect.options[i].selected) {
+            theSelections += theForm.mySelect.options[i].text + '\n';
+          }
+        }
+        alert(theSelections);
+        var submitForm = confirm('Do you want to submit?');
+        if (submitForm) theForm.submit();
+      }
     </script>
   </head>
   <body>
     <h2>CIW JavaScript Specialist</h2>
     <h3>Multiple Select</h3>
-    <form name="myForm" method="post" action="">
+    <form name="myForm" method="post" action="javascript: alert('Submitted');">
       Select items<br>
       <select name="mySelect" multiple="multiple">
         <option value="1">First option</option>

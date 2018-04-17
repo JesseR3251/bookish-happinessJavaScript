@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Modernizr</title>
+    <style>
+    </style>
+    <script type="text/javascript" src="js/modernizr-custom-flexbox-cssgrid.js"></script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Modernizr</h3>
+    <script>
+      var hasFeature = '';
+      if (Modernizr.cssgrid) {
+        hasFeature += 'Has CSS Grid'
+      } else {
+        hasFeature += 'Has No CSS Grid'
+      }
+      hasFeature += '<br>';
+      if (Modernizr.flexbox) {
+        hasFeature += 'Has CSS Flexbox'
+      } else {
+        hasFeature += 'Has No CSS Flexbox'
+      }
+      hasFeature += '<br>';
+      document.write(hasFeature);
+    </script>
+  </body>
+</html>

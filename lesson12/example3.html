@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI</title>
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <style>
+      #dialog-link {
+        padding: .4em 1em .4em 20px;
+        text-decoration: none;
+        position: relative;
+      }
+      #dialog-link span.ui-icon {
+        margin: 0 5px 0 0;
+        position: absolute;
+        left: .2em;
+        top: 50%;
+        margin-top: -8px;
+      }
+      #icons span.ui-icon {
+        float: left;
+        margin: 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery UI</h1>
+    <h2>Autocomplete</h2>
+    <div>
+      <input id="autocomplete" title="type &quot;a&quot;">
+    </div>
+    <h2>Dialog</h2>
+    <p>
+      <a href="#" id="dialog-link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-info"></span>Info</a>
+    </p>
+    <div id="dialog" title="Do you need information?">
+      <p>Press "Yes" to get information, "No"/X/Escape to close the dialog.</p>
+    </div>
+    <h2>Menu</h2>
+    <ul style="width:100px;" id="menu">
+      <li>Meat</li>
+      <li>Vegetable</li>
+      <li>Fruit
+        <ul>
+          <li>Strawberry</li>
+          <li>Orange</li>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Peach</li>
+        </ul>
+      </li>
+      <li>Dairy</li>
+      <li>Breads</li>
+    </ul>
+    <h2>Tooltip</h2>
+    <p id="tooltip">
+      <span title="First Tooltip">Hover over me</span>
+      to see the a tooltip and <span title="Second Tooltip">also over me</span>.
+    </p>
+    <h2>Highlight/Error</h2>
+    <p class="ui-state-highlight ui-corner-all">
+      <strong class="ui-icon ui-icon-check"></strong>This is highlighed!
+    </p>
+    <p class="ui-state-disabled ui-corner-all">
+      <strong class="ui-icon ui-icon-disabled"></strong>This is disabled!
+    </p>
+    <p class="ui-state-error ui-corner-all">
+      <b class="ui-icon ui-icon-alert"></b> This is an error!
+    </p>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function() {
+         var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+        $('#autocomplete').autocomplete({
+          source: availableTags
+        });
+        $('#dialog').dialog({
+          autoOpen: false,
+          width: 400,
+          buttons: [
+            {
+              text: 'Yes',
+              click: function() {
+                $(this).dialog('close');
+                alert('Do stuff for Yes answer!');
+              }
+            },
+            {
+              text: 'No',
+              click: function() {
+                $(this).dialog('close');
+                alert('Do stuff for No answer!');
+              }
+            },
+            {
+              text: 'Huh!',
+              click: function() {
+                $(this).dialog('close');
+                alert('Don\'t know what your problem is!!!');
+              }
+            }
+          ]
+        });
+        $('#dialog-link').click(function(event) {
+          $('#dialog').dialog('open');
+          event.preventDefault();
+        });
+        $('#menu').menu();
+        $('#tooltip').tooltip();
+      });
+    </script>
+  </body>
+</html>

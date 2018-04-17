@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Location</title>
+  </head>
+  <body>
+    <h2>Location</h2>
+    <script type="text/javascript">
+      var webSite = '';
+      var browser = prompt('Which browser do you want to see?','').toUpperCase();
+      switch (browser) {
+        case 'CHROME':
+          webSite = 'https://www.google.com/chrome/browser/features.html';
+          break;
+        case 'FIREFOX':
+          webSite = 'https://getfirefox.com';
+          break;
+        case 'OPERA':
+          webSite = 'http://www.opera.com/download';
+          break;
+        default :
+          break;
+      }
+      if (webSite == '') {
+        document.write('Only Chrome, Firefox and Opera please!!!');
+      } else {
+        window.location = webSite;
+      }
+    </script>
+  </body>
+</html>

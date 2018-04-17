@@ -7,10 +7,11 @@
   <body>
     <h3>Sum of multiplied numbers</h3>
     <script type="text/javascript">
+      debugger;
       var loopCounter = 10;
       var total = 0;
-      for (var i = 1; i < loopCounter; i--) {
-        total -= i * (i + 1);
+      for (var i = 1; i < loopCounter; i++) {
+        total += i * (i + 1);
       };
       document.write('For ' + loopCounter + ' Total='+total);
     </script>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encoding Input/Output</title>
+    <script type="text/javascript">
+      var theMessage = prompt('Enter code to be encoded', '<table border="1"><tr><td>Jello</td></tr></table>');
+      var encodedMessage = encodeURIComponent(theMessage);
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Encoding Input/Output</h3>
+    <hr/>
+    <script type="text/javascript">
+      document.write('   Original: ' + theMessage + '<br>');
+      document.write('URI Encoded: ' + encodedMessage + '<br>');
+      document.write('URI Decoded: ' + decodeURIComponent(encodedMessage) + '<br>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Postal Codes</title>
+    <script type="text/javascript" src="titlecase.js"></script>
+    <script type="text/javascript">
+      var city = prompt('Enter the city you live in','');
+      var postalcode;
+      switch (city.toLowerCase()) {
+        case 'sunrise' :
+          postalcode = 33329;
+          break;
+        case 'plantation' :
+          postalcode = 33326;
+          break;
+        case 'davie' :
+          postalcode = 33314;
+          break;
+        case 'fort lauderdale' :
+          postalcode = 33301;
+          break;
+        case 'tamarac' :
+          postalcode = 33321;
+          break;
+        case 'coral springs' :
+          postalcode = 33068;
+          break;
+        case 'deerfield beach' :
+          postalcode = 33314;
+          break;
+        default :
+          postalcode = 0;
+          break;
+      };
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Postal Codes</h3>
+    <script type="text/javascript">
+      if (postalcode != 0) {
+        document.write('Postal code for ' + titleCase(city) +
+          ' is ' + postalcode);
+      } else {
+        document.write('Unknown city. ' +
+          'Postal code cannot be determined');
+      };   
+    </script>
+  </body>
+</html>

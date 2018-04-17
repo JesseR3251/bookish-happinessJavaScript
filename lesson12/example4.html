@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Plugin - FlipClock.js</title>
+    <link rel="stylesheet" href="css/flipclock.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/flipclock.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var clock = $('.TwelveHourClock').FlipClock({
+          clockFace: 'TwelveHourClock'
+        });
+        clock = $('.DailyCounter').FlipClock(3600*24*3,{
+          clockFace: 'DailyCounter',
+          countdown: true
+        });
+        clock = $('.DailyCounterNoSeconds').FlipClock(3600*24*3,{
+          clockFace: 'DailyCounter',
+          countdown: true,
+          showSeconds: false
+        });
+        clock = $('.HourCounter').FlipClock(4800, {
+          countdown: true
+        });
+        clock = $('.MinuteCounter').FlipClock(300, {
+          countdown: true,
+          clockFace: 'MinuteCounter'
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>jQuery Plugin - FlipClock.js</h3>
+    <h4>Twelve Hour Clock</h4>
+    <div class="TwelveHourClock"></div>
+    <h4>Daily Counter</h4>
+    <div class="DailyCounter"></div>
+    <h4>Daily Counter (no seconds)</h4>
+    <div class="DailyCounterNoSeconds"></div>
+    <h4>Hour Counter</h4>
+    <div class="HourCounter"></div>
+    <h4>Minute Counter</h4>
+    <div class="MinuteCounter"></div>
+  </body>
+</html>

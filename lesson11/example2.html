@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mime Types</title>
+    <script type="text/javascript">
+      var theMimeTypes = '';
+      if (navigator.mimeTypes != null) {
+        theMimeTypes += '<table style="border: thin solid black">';
+        theMimeTypes += '<tr>';
+        theMimeTypes += '<th>Type</th>';
+        theMimeTypes += '<th>Description</th>';
+        theMimeTypes += '<th>Suffixes</th>';
+        theMimeTypes += '<th>Name</th>';
+        theMimeTypes += '</tr>';
+        for (var i = 0; i < navigator.mimeTypes.length; i++) {
+          theMimeTypes += '<tr>';
+          theMimeTypes += '<td>' + navigator.mimeTypes[i].type + '</td>';
+          theMimeTypes += '<td>' + navigator.mimeTypes[i].description + '</td>';
+          theMimeTypes += '<td>' + navigator.mimeTypes[i].suffixes + '</td>';
+          theMimeTypes += '<td>' + navigator.mimeTypes[i].enabledPlugin.name + '</td>';
+          theMimeTypes += '</tr>';
+        }
+        theMimeTypes += '</table>';
+      } else {
+        theMimeTypes = 'Your browser does not recognize the navigator.mimeTypes property.';
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Mime Types</h3>
+    <script type="text/javascript">
+      document.write(theMimeTypes);
+    </script>
+  </body>
+</html>

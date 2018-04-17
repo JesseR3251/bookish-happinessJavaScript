@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Browser Detection</title>
+    <script type="text/javascript">
+      var mactest = (navigator.userAgent.indexOf('Mac')!=-1);
+      var isChrome = (navigator.userAgent.toLowerCase().indexOf('chrome') != -1);
+      var isNetscape = (navigator.appName.indexOf('Netscape') != -1);
+      var isSafari = (navigator.userAgent.indexOf('Safari') != -1);
+      var isOpera = 0;
+      if (window.opera) {isOpera=1};
+      var isIE = 0;
+      if (document.all) {isIE=1};
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Browser Detection</h3>
+    <script type="text/javascript">
+      document.write(
+        'mactest: '+mactest +
+        '<br/>isChrome: ' + isChrome +
+        '<br/>isNetscape: ' + isNetscape +
+        '<br/>isSafari: ' + isSafari +
+        '<br/>isOpera: ' + isOpera +
+        '<br/>isIE: ' + isIE +
+        '<br/>userAgent: ' + navigator.userAgent+
+        '<br/>appName: ' + navigator.appName
+      );
+    </script>
+  </body>
+</html>

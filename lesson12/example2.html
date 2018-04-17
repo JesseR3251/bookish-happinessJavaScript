@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Traversal</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('button').on('click', function() {
+          $('li').each(function() {
+            if ($(this).html() == 'Vegetables') {
+              $(this).html('Dairy');
+            };
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>jQuery Traversal</h3>
+    <ul>
+      <li>Meat</li>
+      <li>Fruit</li>
+      <li>Vegetables</li>
+    </ul>
+    <p><button id="change">Change</button></p>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cookies</title>
+    <script type="text/javascript">
+      var currentDate = new Date();
+      var expireDatePast = new Date(currentDate.getFullYear()-1, currentDate.getMonth(), currentDate.getDate());
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Cookies</h3>
+    <script type="text/javascript">
+      var cookiesContent = 'Start: ' + document.cookie + '<br>';
+      document.cookie = 'Author=George Cooke';
+      cookiesContent += 'After setting Author: ' + document.cookie + '<br>';
+      document.cookie = 'College=Broward';
+      cookiesContent += 'After setting College: ' + document.cookie + '<br>';
+      document.cookie = 'Author=; expires=' + expireDatePast;
+      cookiesContent += 'After deleting Author: ' + document.cookie + '<br>';
+      document.cookie = 'College=; expires=' + expireDatePast;
+      cookiesContent += 'After deleting College: ' + document.cookie + '<br>';
+      document.write(cookiesContent);
+    </script>
+  </body>
+</html>

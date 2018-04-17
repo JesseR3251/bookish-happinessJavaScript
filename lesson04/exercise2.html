@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Series Function</title>
+    <script>
+      function series(start, limit, step) {
+        var str = '' + start;
+        for (var i=start + step; i<=limit; i+=step) {
+          str += ',' + i;
+        }
+        return str;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Series Function</h3>
+    <p>A call to the function series(1,10,2) should give "1, 3, 5, 7, 9".</p>
+    <script type="text/javascript">
+      document.write('Result: series(1,10,2) gives ' + series(1,10,2));
+    </script>
+  </body>
+</html>

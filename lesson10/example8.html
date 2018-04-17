@@ -4,30 +4,29 @@
     <meta charset="utf-8">
     <title>Form Validation</title>
     <script type="text/javascript">
-		function checkForm() {
-			var elem = document.getElementById('myForm').elements;
-			for (var i = 0; i < elem.length; i++) {
-				if (elem[i].value.length < 1) {
-					alert('Enter a value for field ' + elem[i].name);
-					var myText = document.getElementById(elem[i].name);
-					myText.focus();
-					return false;
-				}
-			}
-			return true;
-		}
-	
-		function submitForm() {
-			document.myForm.action = 'http://ss1.ciwcertified.com/cgi-bin/process.pl';
-			alert('Submitting to ' + document.myForm.action);
-			document.myForm.submit();
-		}
+      function checkForm() {
+        var elem = document.getElementById('myForm').elements;
+        for (var i = 0; i < elem.length; i++) {
+          if (elem[i].value.length < 1) {
+            alert('Enter a value for field ' + elem[i].name);
+            var myText = document.getElementById(elem[i].name);
+            myText.focus();
+            return false;
+          }
+        }
+        return true;
+      }
+      function submitForm() {
+        document.myForm.action = 'http://ss1.ciwcertified.com/cgi-bin/process.pl';
+        alert('Submitting to ' + document.myForm.action);
+        document.myForm.submit();
+      }
     </script>
   </head>
   <body>
     <h2>CIW JavaScript Specialist</h2>
     <h3>Form Validation</h3>
-    <form name="myForm" method="post" action="javascript:submitForm()" id="myForm">
+    <form name="myForm" method="post" action="javascript: submitForm()" id="myForm">
       *First Name: <input type="text" name="firstname" id="firstname"><br>
       *Last Name: <input type="text" name="lastname" id="lastname"><br>
       *Email: <input type="text" name="email" id="email"><br>

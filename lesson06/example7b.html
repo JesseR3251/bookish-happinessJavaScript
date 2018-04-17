@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Navigator</title>
+    <script type="text/javascript">
+      function openWindow() {
+        var info = "";
+        info += 'Welcome, ' + navigator.appCodeName;
+        info += ' user\nYou are using the ';
+        info += navigator.appName + ' browser,\nversion ';
+        info += navigator.appVersion + '.\nYour user agent ';
+        info += 'information is ' + navigator.userAgent;
+         
+        alert(info);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Navigator</h2>
+    <script type="text/javascript">
+      document.write('<p>The property ' +
+        '<strong>navigator.userAgent</strong> returns ' + 
+        navigator.userAgent + '</p>');
+    </script>
+    <form name="myForm">
+      <input type="button" name="buttonClick"
+        value="Click for more Browser info" onClick="openWindow()">
+    </form>
+  </body>
+</html>

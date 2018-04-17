@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plugins</title>
+    <script type="text/javascript">
+      var thePlugins = '';
+      if (navigator.plugins != null) {
+        thePlugins += '<table style="border: thin solid black">';
+        thePlugins += '<tr>';
+        thePlugins += '<th>Type</th>';
+        thePlugins += '<th>Description</th>';
+        thePlugins += '<th>Filename</th>';
+        thePlugins += '</tr>';
+        for (var i = 0; i < navigator.plugins.length; i++) {
+          thePlugins += '<tr>';
+          thePlugins += '<td>' + navigator.plugins[i].name + '</td>';
+          thePlugins += '<td>' + navigator.plugins[i].description + '</td>';
+          thePlugins += '<td>' + navigator.plugins[i].filename + '</td>';
+        }
+        thePlugins += '</table>';
+      } else {
+        thePlugins = 'This browser does not support the navigator.plugins property.';
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Plugins</h3>
+    <script type="text/javascript">
+      document.write(thePlugins);
+    </script>
+  </body>
+</html>

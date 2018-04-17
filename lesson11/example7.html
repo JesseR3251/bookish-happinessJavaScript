@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Set/Delete Cookies</title>
+    <script type="text/javascript" src="cookies.js"></script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Set/Delete Cookies</h3>
+    <form>
+      Name: <input id="clientname" value="">
+      <script type="text/javascript">
+        var currentName = getNameCookie();
+        if (currentName.length > 0) {
+          document.getElementById(cookieName).value = currentName;
+        }
+      </script>
+      <br/>
+      <input type="button" value="Set Cookie" onclick="setNameCookie()">
+      <input type="button" value="Delete Cookie" onclick="deleteNameCookie()">
+      <input type="button" value="Set Author Cookie" onclick="setAuthorCookie()">
+      <input type="button" value="Delete Author Cookie" onclick="deleteAuthorCookie()">
+      <input type="button" value="See Cookies" onclick="alert('Cookies: ' + document.cookie)">
+    </form>
+  </body>
+</html>

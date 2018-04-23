@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Template External</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+    $("#Hide").prop("checked",true);(function(){
+        $("div").hide();
+    });
+	</script
+  </head>
+  <body>
+       <header>
+        <h1>
+            Lab 4
+        </h1>
+    </header>
+    <main>
+	<div>
+	<p>This is some text that has a JQuery effect!</p>
+	</div>
+        <form action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="get">
+            <fieldset>
+                Effects: <br>
+                <!--using radial here for effect-->
+                <label>Hide</label>
+                <input style="height:20px;" type="radio" name="effect" id="Hide"><br>
+                <label>Show</label>
+                <input style="height:20px;" type="radio" name="effect" id="Show"><br>
+                <label>Toggle</label>
+                <input style="height:20px;" type="radio" name="effect" id="Toggle"><br>
+				<label>Fade Out</label>
+                <input style="height:20px;" type="radio" name="effect" id="Fade Out"><br>
+                <label>Fade In</label>
+                <input style="height:20px;" type="radio" name="effect" id="Fade In"><br>
+                <label>Slide Up</label>
+                <input style="height:20px;" type="radio" name="effect" id="Slide Up"><br>
+				<label>Slide Down</label>
+                <input style="height:20px;" type="radio" name="effect" id="Slide Down"><br>
+				<label>Slide Toggle</label>
+                <input style="height:20px;" type="radio" name="effect" id="Slide Toggle"><br>
+				<label>Fade To</label>
+                <input style="height:20px;" type="radio" name="effect" id="Fade To"><br>
+            </fieldset>      
+            <br>
+            <input style="width:35%; height:100%;" type="submit" value="Apply">
+            <br>
+        </form>
+  </body>
+</html>

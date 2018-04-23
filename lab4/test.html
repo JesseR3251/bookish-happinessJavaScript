@@ -2,19 +2,6 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- <script> -->
-<!-- function myFunction() { -->
-    <!-- var effects = document.forms[0]; -->
-    <!-- var effect = ""; -->
-    <!-- var i; -->
-    <!-- for (i = 0; i < effects.length; i++) { -->
-        <!-- if (effects[i].checked) { -->
-            <!-- effect = effect + effects[i].value; -->
-        <!-- } -->
-    <!-- } -->
-	<!-- return effect; -->
-<!-- } -->
-<!-- </script> -->
 <body>
 
 <div id="test">
@@ -22,17 +9,17 @@ test
 </div>
 
 <form action="">
-  <input id="hide" type="radio" name="effect" value="hideTrue"> Hide<br>
-  <input id="show" type="radio" name="effect" value="showTrue" checked="checked"> Show<br>
-  <input id="toggle" type="radio" name="effect" value="hideTrue"> Toggle<br>
-  <input id="fadeOut" type="radio" name="effect" value="hideTrue"> Fade Out<br>
-  <input id="fadeIn" type="radio" name="effect" value="hideTrue"> Fade In<br>
-  <input id="slideUp" type="radio" name="effect" value="hideTrue"> Slide Up<br>
-  <input id="slideDown" type="radio" name="effect" value="hideTrue"> Slide Down<br>
-  <input id="slideToggle" type="radio" name="effect" value="hideTrue"> Slide Toggle<br>
-  <input id="fadeTo" type="radio" name="effect" value="hideTrue"> Fade To<br>
+  <input id="hide" type="radio" name="effect" value="hide"> Hide<br>
+  <input id="show" type="radio" name="effect" value="show" checked="checked"> Show<br>
+  <input id="toggle" type="radio" name="effect" value="toggle"> Toggle<br>
+  <input id="fadeOut" type="radio" name="effect" value="fadeOut"> Fade Out<br>
+  <input id="fadeIn" type="radio" name="effect" value="fadeIn"> Fade In<br>
+  <input id="slideUp" type="radio" name="effect" value="slideUp"> Slide Up<br>
+  <input id="slideDown" type="radio" name="effect" value="slideDown"> Slide Down<br>
+  <input id="slideToggle" type="radio" name="effect" value="slideToggle"> Slide Toggle<br>
+  <input id="fadeTo" type="radio" name="effect" value="fadeTo"> Fade To<br>
     <br><br>
- <button id="apply" type="button" onclick="myFunction()">Apply</button> 
+ <button id="button" type="button">Apply</button> 
   <!-- <input type="radio" name="effect" value="other"> Other -->
 </form>
 <script>
@@ -42,36 +29,43 @@ test
   <!-- $("#effectText" ).html( $( "input:checked" ).val() + " is checked!" ); -->
 <!-- }) -->
 
-$("#hide").click(function(){
-	$( "input:checked" );
-    $("#effectText").hide();
-}); 
+$("#button").click(function(){
+	var allInputs = $( ":input" );
+	$.each(allInputs,function(index,value) {
+		var test = index;
+		var test2 = value;
+		if (value.checked == true && value.value=="hide")
+			$("#effectText").hide();
+		else if (value.checked == true && value.value =="show")
+			$("#effectText").show(); 
+ }); 
+	});
+    
+ 
 
-$("#show").click(function(){
-    $("#effectText").show();
-});
 
-$("#toggle").click(function(){
-    $("#effectText").toggle();
-}); 
-$("#fadeOut").click(function(){
-    $("#effectText").fadeOut(1000);
-}); 
-$("#fadeIn").click(function(){
-    $("#effectText").fadeIn(1000);
-}); 
-$("#slideUp").click(function(){
-    $("#effectText").slideUp(1000);
-}); 
-$("#slideDown").click(function(){
-    $("#effectText").slideDown(1000);
-}); 
-$("#slideToggle").click(function(){
-    $("#effectText").slideToggle(1000);
-}); 
-$("#fadeTo").click(function(){
-    $("#effectText").fadeTo("slow",.5);
-});  
+
+<!-- $("#toggle").click(function(){ -->
+    <!-- $("#effectText").toggle(); -->
+<!-- });  -->
+<!-- $("#fadeOut").click(function(){ -->
+    <!-- $("#effectText").fadeOut(1000); -->
+<!-- });  -->
+<!-- $("#fadeIn").click(function(){ -->
+    <!-- $("#effectText").fadeIn(1000); -->
+<!-- });  -->
+<!-- $("#slideUp").click(function(){ -->
+    <!-- $("#effectText").slideUp(1000); -->
+<!-- });  -->
+<!-- $("#slideDown").click(function(){ -->
+    <!-- $("#effectText").slideDown(1000); -->
+<!-- });  -->
+<!-- $("#slideToggle").click(function(){ -->
+    <!-- $("#effectText").slideToggle(1000); -->
+<!-- });  -->
+<!-- $("#fadeTo").click(function(){ -->
+    <!-- $("#effectText").fadeTo("slow",.5); -->
+<!-- });   -->
 
 </script>
 

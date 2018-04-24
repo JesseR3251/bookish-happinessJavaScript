@@ -1,11 +1,11 @@
-function setCookie(userName, nameValue, expireDays) {
+function setUserName(userName, nameValue, expireDays) {
     var d = new Date();
     d.setTime(d.getTime() + (expireDays * 24 * 60 * 60 * 1000));
     var expireDate = "expireDate="+d.toUTCString();
     document.cookie = userName + "=" + nameValue + ";" + expireDate + ";path=/";
 }
 
-function getCookie(userName) {
+function getUserName(userName) {
     var name = userName + "=";
     var cookieSplit = document.cookie.split(';');
     for(var i = 0; i < cookieSplit.length; i++) {
@@ -20,24 +20,21 @@ function getCookie(userName) {
     return "";
 }
 
-
-
 function checkCookie() {
-    var user = getCookie("username");
+    var user = getUserName("username");
     if (user != "") {
        var test = "Welcome back " + user + ". Your visit count is: " + getCount();
 	   document.getElementById("homeText").innerHTML = test;
     } else {
         user = prompt("Please enter your name:", "");
         if (user != "" && user != null) {
-            setCookie("username", user, 365);
+            setUserName("username", user, 365);
         }
     }
 } 
-
  
 cookieName = "Counter";
-function doCookie() {
+function performCount() {
 
   var today = new Date()
   var expireDate = new Date()

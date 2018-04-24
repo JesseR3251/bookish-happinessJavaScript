@@ -68,7 +68,7 @@ function doCookie() {
   }
 
 function getCount() {
-  count=1;
+  count = 0;
   if(document.cookie) {
     index = document.cookie.indexOf(cookieName);
     if (index != -1) {

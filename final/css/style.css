@@ -1,0 +1,38 @@
+.slide {
+    display: none;
+}
+
+.slide {
+    vertical-align: middle;
+    width: 100%
+}
+
+button {
+    padding: 15px 32px;
+    background-color: #e7e7e7;
+    color: black;
+    font-size: 16px;
+
+}
+
+div {
+    max-width: 800px;
+}
+
+body {
+    color: #000060;
+    background-color: #9DBEFF;
+    font-family: "helvetica";
+}
+
+blockquote {
+    font-size: 20px;
+    text-align: center;
+}
+
+.changingImg {
+    float: left;
+    padding: 50px;
+    margin-left: -70px;
+    margin-top: -70px
+}

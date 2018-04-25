@@ -23,10 +23,12 @@ function getUserName(userName) {
 function checkCookie() {
     var user = getUserName("username");
     if (user != "") {
-       var test = "Welcome back " + user + ". Your visit count is: " + getCount();
-	   document.getElementById("homeText").innerHTML = test;
+       var printMessage = "Welcome back " + user + ". Your visit count is: " + getCount();
+	   document.getElementById("homeText").innerHTML = printMessage;
     } else {
         user = prompt("Please enter your name:", "");
+		userMessage = "Welcome " + user + ". Please enjoy your stay!";
+		document.getElementById("homeText").innerHTML = userMessage;
         if (user != "" && user != null) {
             setUserName("username", user, 365);
         }

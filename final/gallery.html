@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="gallery.css">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-<div class="w3-content" style="max-width:800px">
-  <img class="mySlides" src="lab-2.png" style="width:100%">
-  <img class="mySlides" src="lab-3.png" style="width:100%">
-  <img class="mySlides" src="unit-4.png" style="width:100%">
-</div>
+    <h1>Gallery</h1>
+    <br>
+    <div>
+        <img class="slide" src="/assets/lab-2.PNG">
+        <img class="slide" src="/assets/lab-3.PNG">
+        <img class="slide" src="/assets/unit-4.PNG">
+        <button onclick="add(-1)">&#10094;</button>
+        <button style="float: right" onclick="add(+1)">&#10095;</button>
+    </div>
+
+    <script src="/javascript/gallery-script.js">
 
 
-
-<script src="gallery-script.js">
-</script
+    </script>
 
 </body>
-</html> 
+
+</html>

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title> Contact Me </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
+
 <body>
     <header>
         <h1>
@@ -15,25 +21,27 @@
     <main>
         <blockquote>
             <p>
-            <form action="">
-                First name:<br>
-                <input type="text" name="firstname"><br><br>
-                Last name:<br>
-                <input type="text" name="lastname">
-                <br><br>
-                User name:<br><br>
-                <input type="text" name="username"><br><br>
-                User password:<br><br>
-                <input type="password" name="psw">
+                <form action="" name="formInfo">
+                    First name:<br>
+                    <input type="text" name="firstname"><br><br> Last name:<br>
+                    <input type="text" name="lastname">
+                    <br><br> Email:<br>
+                    <input id='email' onClick="whiteEmail()" name="email">
+                    <br><br> Date: <br> <input type="text" id="datepicker">
+                    <br><br>Password:<br>
+<input type="password" id="password" required>
+                    <br>
+                    <br>
+                    <input type="submit" id='validate' value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
                 <br>
-                <br>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </form>
-            <br>
         </blockquote>
+        <h2 id='result'></h2>
     </main>
+    <script src="javascript/contactme-script.js"></script>
 </body>
+
 </html>
 
 <!--

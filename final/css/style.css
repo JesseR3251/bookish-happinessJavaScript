@@ -41,3 +41,8 @@ form {
     border: solid;
     padding: 20px;
 }
+
+img.changingImg {
+    max-width: 35%;
+    max-height: 35%;
+}

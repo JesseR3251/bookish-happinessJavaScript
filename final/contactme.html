@@ -20,28 +20,27 @@
     </header>
     <main>
         <blockquote>
-            <p>
-                <form action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="get" novalidate onsubmit="return validateField()">
-                    First name:<br>
-                    <input type="text" required name="firstname"><br><br> Last name:<br>
-                    <input type="text" required name="lastname">
-                    <br><br> Email:<br>
-                    <input id='email' required onClick="whiteEmail()" name="email">
-                    <br><br> Date: <br> <input required type="text" id="datepicker">
-                    <br><br>Password:<br>
-                    <input type="password" id="password" required><br>
-                    <progress max="100" value="0" id="strength" style="width: 230px"></progress>
-                    <br>
-                    <br> Comments:
-                    <br>
-                    <textarea required name="ta" rows="6" style="width: 340px;" onKeyDown="textCounter(this.form.ta,this.form.countDisplay)" onKeyUp="textCounter(this.form.ta,this.form.countDisplay)"></textarea>
-                    <br>
-                    <input readonly type="text" name="countDisplay" size="3" maxlength="3" value="250"> Characters Remaining
-                    <br><br>
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
-                </form>
+            <form action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="get" novalidate onsubmit="return validateField()">
+                First name:<br>
+                <input type="text" required name="firstname"><br><br> Last name:<br>
+                <input type="text" required name="lastname">
+                <br><br> Email:<br>
+                <input id='email' required onClick="whiteEmail()" name="email">
+                <br><br> Date: <br> <input required type="text" id="datepicker">
+                <br><br>Password:<br>
+                <input type="password" id="password" required><br>
+                <progress max="100" value="0" id="strength" style="width: 230px"></progress>
                 <br>
+                <br> Comments:
+                <br>
+                <textarea required name="ta" rows="6" style="width: 340px;" onKeyDown="textCounter(this.form.ta,this.form.countDisplay)" onKeyUp="textCounter(this.form.ta,this.form.countDisplay)"></textarea>
+                <br>
+                <input readonly type="text" name="countDisplay" size="3" maxlength="3" value="250"> Characters Remaining
+                <br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <br>
         </blockquote>
     </main>
     <script src="javascript/contactme-script.js"></script>

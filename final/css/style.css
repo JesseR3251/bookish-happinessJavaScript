@@ -46,3 +46,10 @@ img.changingImg {
     max-width: 35%;
     max-height: 35%;
 }
+
+p {
+    text-indent: 2.0em;
+    line-height: 2.0;
+    word-wrap: break-word;
+    font-size: 13pt;
+}

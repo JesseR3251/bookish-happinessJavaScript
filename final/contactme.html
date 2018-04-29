@@ -21,34 +21,30 @@
     <main>
         <blockquote>
             <p>
-                <form action="" name="formInfo">
+                <form action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="get" nonvalidate onsubmit="return validateField()">
                     First name:<br>
-                    <input type="text" name="firstname"><br><br> Last name:<br>
-                    <input type="text" name="lastname">
+                    <input type="text" required name="firstname"><br><br> Last name:<br>
+                    <input type="text" required name="lastname">
                     <br><br> Email:<br>
-                    <input id='email' onClick="whiteEmail()" name="email">
-                    <br><br> Date: <br> <input type="text" id="datepicker">
+                    <input id='email' required onClick="whiteEmail()" name="email">
+                    <br><br> Date: <br> <input required type="text" id="datepicker">
                     <br><br>Password:<br>
-<input type="password" id="password" required>
+                    <input type="password" id="password" required><br>
+                    <progress max="100" value="0" id="strength" style="width: 230px"></progress>
                     <br>
+                    <br> Comments:
                     <br>
-                    <input type="submit" id='validate' value="Submit">
+                    <textarea required name="ta" rows="6" style="width: 340px;" onKeyDown="textCounter(this.form.ta,this.form.countDisplay)" onKeyUp="textCounter(this.form.ta,this.form.countDisplay)"></textarea>
+                    <br>
+                    <input readonly type="text" name="countDisplay" size="3" maxlength="3" value="250"> Characters Remaining
+                    <br><br>
+                    <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
                 </form>
                 <br>
         </blockquote>
-        <h2 id='result'></h2>
     </main>
     <script src="javascript/contactme-script.js"></script>
 </body>
 
 </html>
-
-<!--
-Include a form on the Contact Me page that prompts for and validates:
-	First and last name
-	An email address (validate using a regular expression)
-	A date using a JavaScript pop-up calendar (jQuery can be used)
-	A password with a JavaScript password strength meter (See Password Tips for more information)
-	A comments box that limits input to 500 characters with a running count of characters input
-Use http://ss1.ciwcertified.com/cgi-bin/process.pl as the action for the form and include the novalidate attribute in the <form> tag. Use contactme.html as the filename for the Contact Me page.-->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div data-toggle="tooltip" data-placement="bottom" title="Jumbotron contain" class="jumbotron">
+            <h1 class="display-1" data-toggle="tooltip" data-placement="top" title="Custom header fonts">Welcome to Bootstrap</h1>
+            <h3 class="display-5">There Are Endless Possibilities Within This Library!</h3>
+        </div>
+        <img src="/assets/colorado.jpg" class="img-thumbnail float left" alt="Cinque Terre" data-toggle="tooltip" data-placement="right" title="Thumbnail Image" width="912" height="306">
+        <br>
+        <br>
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/assets/nature-card.jpg" alt="Colorado" data-toggle="tooltip" data-placement="bottom" title="Cards">
+                <div class="card-body">
+                    <h5 class="card-title">Explore Colorado</h5>
+                    <p class="card-text">Find breath taking views.</p>
+                    <a href="https://www.colorado.com/" target="_blank" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/assets/flowers-card.jpg" alt="Flowers" data-toggle="tooltip" data-placement="bottom" title="Cards">
+                <div class="card-body">
+                    <h5 class="card-title">Family Vacations</h5>
+                    <p class="card-text">Summer is right around the corner, step outside your comfort zone.</p>
+                    <a href="https://traveloregon.com/" target="_blank" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/assets/europe-card.jpg" alt="Europe" data-toggle="tooltip" data-placement="bottom" title="Cards">
+                <div class="card-body">
+                    <h5 class="card-title">Travel to Europe!</h5>
+                    <p class="card-text">Switzerland is known for it's unique terrain, learn first hand the wonders of Switzerland.</p>
+                    <a href="https://www.lonelyplanet.com/switzerland" target="_blank" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function() {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+
+        </script>
+</body>
+
+</html>

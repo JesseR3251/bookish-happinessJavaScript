@@ -4,8 +4,5 @@ pages.forEach(function (element) {
     body += '<li style = "display: inline;"><a href="' + element[1] + '">' + element[0] + '</a></li>&ensp;'
 });
 body += '</ul>'
-//for (var i = 0; pages.length < i; i++) {
-//    
-//}
 
 document.getElementById('dom').innerHTML = body;

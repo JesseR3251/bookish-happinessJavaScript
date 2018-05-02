@@ -14,17 +14,22 @@
 <body>
       <div id='dom'> </div>
   <br>
+  <div class = "toshow" style="display: none;">
     <div class="container">
-        <div data-toggle="tooltip" data-placement="bottom" title="Jumbotron contain" class="jumbotron">
-            <h1 class="display-1" data-toggle="tooltip" data-placement="top" title="Custom header fonts">Welcome to Bootstrap</h1>
-            <h3 class="display-5">There Are Endless Possibilities Within This Library!</h3>
+        <div class="jumbotron">
+            <h1 class="display-1">Take a Trip to Colorado</h1>
+            <h3 class="display-5">Example page using Bootstrap and Jquery</h3>
         </div>
-        <img src="/assets/colorado.jpg" class="img-thumbnail float left" alt="Cinque Terre" data-toggle="tooltip" data-placement="right" title="Thumbnail Image" width="912" height="306">
-        <br>
-        <br>
-        <div class="card-deck">
+      </div>
+  </div>
+  <div class = "slide" style="display: none;">
+        <img src="/assets/colorado.jpg" class="img-thumbnail float left" alt="Cinque Terre" data-toggle="tooltip" data-placement="right" title="Flatirons" width="912" height="306" style = "display:block; margin: 0 auto;">
+    </div>
+  <br>
+     <div class = "toshow2" style = "display: none;">  
+  <div class="card-deck">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/assets/nature-card.jpg" alt="Colorado" data-toggle="tooltip" data-placement="bottom" title="Cards">
+                <img class="card-img-top" src="/assets/nature-card.jpg" alt="Colorado" data-toggle="tooltip" data-placement="bottom" title="Colorado">
                 <div class="card-body">
                     <h5 class="card-title">Explore Colorado</h5>
                     <p class="card-text">Find breath taking views.</p>
@@ -32,7 +37,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/assets/flowers-card.jpg" alt="Flowers" data-toggle="tooltip" data-placement="bottom" title="Cards">
+                <img class="card-img-top" src="/assets/flowers-card.jpg" alt="Flowers" data-toggle="tooltip" data-placement="bottom" title="Lake Views">
                 <div class="card-body">
                     <h5 class="card-title">Family Vacations</h5>
                     <p class="card-text">Summer is right around the corner, step outside your comfort zone.</p>
@@ -40,7 +45,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/assets/europe-card.jpg" alt="Europe" data-toggle="tooltip" data-placement="bottom" title="Cards">
+                <img class="card-img-top" src="/assets/europe-card.jpg" alt="Europe" data-toggle="tooltip" data-placement="bottom" title="Switzerland">
                 <div class="card-body">
                     <h5 class="card-title">Travel to Europe!</h5>
                     <p class="card-text">Switzerland is known for it's unique terrain, learn first hand the wonders of Switzerland.</p>
@@ -48,14 +53,18 @@
                 </div>
             </div>
         </div>
+    </div>   
         <script>
-            $(function() {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
+
 
         </script>
+      <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
           <script src="/javascript/multidimensional-array.js"></script>
     <script src="/javascript/dom-manip.js"></script>
+  <script src="/javascript/mypage-script.js"></script>
 </body>
 
 </html>

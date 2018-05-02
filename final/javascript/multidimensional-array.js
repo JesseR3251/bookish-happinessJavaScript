@@ -5,3 +5,4 @@ var pages = [
     ['Contact Me', '/contactme.html'],
     ['My Page', '/mypage.html']
 ]
+

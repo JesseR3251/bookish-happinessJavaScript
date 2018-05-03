@@ -1,3 +1,6 @@
+// Dynamically loading in the multidimensional array
+
+// HTML Injection, using a horizontal tabbed nav bar
 var body = '<ul style = "list-style-type: none; margin:0px;padding:0px;display: inline;">';
 
 pages.forEach(function (element) {

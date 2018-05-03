@@ -54,7 +54,16 @@ p {
     font-size: 13pt;
 }
 
-a:link, a:visited {
+.noStyle {
+    background-color: #B1CBBB;
+    display: list-item;
+    padding: 0px;
+    text-align: left;
+}
+
+a:link,
+a:visited,
+li {
     background-color: black;
     color: white;
     padding: 10px 20px;

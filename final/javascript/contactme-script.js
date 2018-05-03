@@ -1,6 +1,5 @@
 var maxAmount = 250;
-var strengthBar = document.getElementById("strength")
-var strength = 0;
+
 
 // Email RegEx, check to see if email is valid syntax
 function emailSubmit(email) {
@@ -48,6 +47,8 @@ pass.addEventListener('keyup', function () {
 })
 
 function checkPassword(password) {
+    var strengthBar = document.getElementById("strength")
+    var strength = 0;
     // Check if uppercase/lowercase/ or numbers are used
     if (password.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)) {
         strength += 1

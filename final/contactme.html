@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div id='dom'> </div>
+    <div id='dom'> </div>
     <header>
         <h1>
             Contact Me
@@ -27,16 +27,16 @@
                 <input type="text" required name="lastname">
                 <br><br> Email:<br>
                 <input id='email' required onClick="whiteEmail()" name="email">
-                <br><br> Date: <br> <input required type="text" id="datepicker">
+                <br><br> Date: <br> <input required type="text" name="date" id="datepicker">
                 <br><br>Password:<br>
-                <input type="password" id="password" required><br>
+                <input type="password" name="password" id="password" required><br>
                 <progress max="100" value="0" id="strength" style="width: 230px"></progress>
                 <br>
                 <br> Comments:
                 <br>
-                <textarea required name="ta" rows="6" style="width: 340px;" onKeyDown="textCounter(this.form.ta,this.form.countDisplay)" onKeyUp="textCounter(this.form.ta,this.form.countDisplay)"></textarea>
+                <textarea required name="comments" rows="6" style="width: 340px;" onKeyDown="textCounter(this.form.comments,this.form.countDisplay)" onKeyUp="textCounter(this.form.comments,this.form.countDisplay)"></textarea>
                 <br>
-                <input readonly type="text" name="countDisplay" size="3" maxlength="3" value="250"> Characters Remaining
+                <input readonly disabled="disabled" type="text" name="countDisplay" size="3" maxlength="3" value="250"> Characters Remaining
                 <br><br>
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
@@ -45,7 +45,7 @@
         </blockquote>
     </main>
     <script src="javascript/contactme-script.js"></script>
-      <script src="/javascript/multidimensional-array.js"></script>
+    <script src="/javascript/multidimensional-array.js"></script>
     <script src="/javascript/dom-manip.js"></script>
 </body>
 
